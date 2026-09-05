@@ -107,10 +107,7 @@ npm run build
 - **Phone**: 8247051243
 - **Profiles**:
   - GitHub: [kavithasreejayavaram](https://github.com/kavithasreejayavaram)
-  - LinkedIn: `REPLACE_WITH_LINKEDIN_URL`
-  - LeetCode: `REPLACE_WITH_LEETCODE_URL`
-  - CodeChef: `REPLACE_WITH_CODECHEF_URL`
-  - HackerRank: `REPLACE_WITH_HACKERRANK_URL`
+  - LinkedIn, LeetCode, CodeChef and HackerRank: not published in the current portfolio data
 
 ---
 

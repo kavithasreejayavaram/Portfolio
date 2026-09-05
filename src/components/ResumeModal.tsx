@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Download, ExternalLink, Shield, FileText, CheckCircle2, Mail, Phone, MapPin } from 'lucide-react';
+import { X, Shield, FileText, CheckCircle2, Mail, MapPin } from 'lucide-react';
 import { RESUME_DATA } from '@/data/resumeData';
 
 interface ResumeModalProps {
@@ -40,17 +40,6 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             </div>
 
             <div className="flex items-center gap-2">
-              <a
-                href="#download-resume"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert("Resume asset ready for replacement. Link token: REPLACE_WITH_RESUME_PDF_PATH");
-                }}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold font-mono-code transition-colors"
-              >
-                <Download className="w-3.5 h-3.5" />
-                <span>DOWNLOAD RESUME</span>
-              </a>
               <button
                 onClick={onClose}
                 className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
@@ -78,10 +67,6 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                   <div className="flex items-center gap-2">
                     <Mail className="w-3.5 h-3.5 text-blue-400" />
                     <span>{RESUME_DATA.personal.email}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="w-3.5 h-3.5 text-blue-400" />
-                    <span>{RESUME_DATA.personal.phone}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="w-3.5 h-3.5 text-blue-400" />
@@ -200,15 +185,12 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 CLOSE
               </button>
               <a
-                href="#download-resume"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert("Resume asset ready for replacement. Link token: REPLACE_WITH_RESUME_PDF_PATH");
-                }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold font-mono-code transition-colors"
+                href="/resume"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-xs font-semibold font-mono-code text-white transition-colors hover:bg-blue-500"
               >
-                <Download className="w-4 h-4" />
-                <span>DOWNLOAD PDF RESUME</span>
+                OPEN PRINTABLE RESUME
               </a>
             </div>
           </div>

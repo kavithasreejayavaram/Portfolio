@@ -23,11 +23,10 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
 
   const navItems = [
     { label: 'HOME', href: '#home' },
-    { label: 'ABOUT', href: '#about' },
-    { label: 'STACK', href: '#stack' },
-    { label: 'PROJECTS', href: '#projects' },
+    { label: 'WORK', href: '#projects' },
+    { label: 'SKILLS', href: '#stack' },
     { label: 'SECURITY LAB', href: '#security-lab' },
-    { label: 'CERTIFICATIONS', href: '#certifications' },
+    { label: 'ABOUT', href: '#about' },
     { label: 'CONTACT', href: '#contact' },
   ];
 

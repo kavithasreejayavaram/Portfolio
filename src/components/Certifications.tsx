@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, CheckCircle2, ShieldCheck, ExternalLink } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 import { RESUME_DATA } from '@/data/resumeData';
 
 export default function Certifications() {
@@ -14,7 +14,7 @@ export default function Certifications() {
         <div className="space-y-2 mb-12">
           <div className="flex items-center gap-2 text-xs font-mono-code text-blue-400 tracking-widest uppercase">
             <span className="w-2 h-2 rounded-full bg-blue-500" />
-            <span>// 05. CREDENTIALS VAULT</span>
+            <span>// 05. CERTIFICATIONS</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             VERIFIED CERTIFICATIONS & ACCREDITATIONS
@@ -58,13 +58,7 @@ export default function Certifications() {
                   DATE: {cert.date}
                 </span>
 
-                <button
-                  onClick={() => alert(`Verification link placeholder for ${cert.title}`)}
-                  className="inline-flex items-center gap-1.5 text-blue-400 hover:text-blue-300 font-semibold text-[11px] hover:underline"
-                >
-                  <span>VERIFY CREDENTIAL</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </button>
+                <span className="text-[11px] text-slate-500">CREDENTIAL RECORDED</span>
               </div>
             </motion.div>
           ))}

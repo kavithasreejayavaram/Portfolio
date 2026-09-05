@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, ArrowRight, FileText, Cpu, Terminal, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, FileText, Terminal, CheckCircle2, ExternalLink } from 'lucide-react';
 import HeroNodeMap from './HeroNodeMap';
 import SystemStatusBadge from './SystemStatusBadge';
 import { RESUME_DATA } from '@/data/resumeData';
@@ -30,7 +30,7 @@ export default function Hero({ onOpenResume }: HeroProps) {
           >
             {/* Operator Identifier */}
             <div className="flex flex-wrap items-center gap-3">
-              <SystemStatusBadge status="OPERATIONAL INTERFACE" />
+              <SystemStatusBadge status="OPEN TO OPPORTUNITIES" />
               <span className="text-xs font-mono-code text-slate-400 border-l border-slate-800 pl-3">
                 SRM IST // CSE (CYBER SECURITY) '27
               </span>
@@ -39,9 +39,8 @@ export default function Hero({ onOpenResume }: HeroProps) {
             {/* Main Headline */}
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-white">
-                  {RESUME_DATA.personal.headline}
-                </span>
+                <span className="block text-white">{RESUME_DATA.personal.shortName}</span>
+                <span className="mt-2 block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-white">{RESUME_DATA.personal.headline}</span>
               </h1>
               <p className="text-lg sm:text-xl font-medium text-slate-300 max-w-2xl leading-relaxed">
                 {RESUME_DATA.personal.tagline}
@@ -67,7 +66,7 @@ export default function Hero({ onOpenResume }: HeroProps) {
                 <div className="flex items-center gap-2">
                   <Terminal className="w-4 h-4 text-blue-400" />
                   <span className="text-xs font-bold font-mono-code text-slate-200 tracking-wider">
-                    SYSTEM PROFILE // OPERATOR DATA
+                    TECHNICAL PROFILE
                   </span>
                 </div>
                 <span className="text-[10px] font-mono-code text-emerald-400 px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800/60">
@@ -101,7 +100,7 @@ export default function Hero({ onOpenResume }: HeroProps) {
                   <span className="text-slate-500 block text-[10px] uppercase">CURRENT STATUS</span>
                   <span className="text-emerald-400 font-medium flex items-center gap-1">
                     <CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" />
-                    {RESUME_DATA.personal.statusProfile.currentStatus}
+                    OPEN TO INTERNSHIPS / ENGINEERING OPPORTUNITIES
                   </span>
                 </div>
               </div>
@@ -113,8 +112,18 @@ export default function Hero({ onOpenResume }: HeroProps) {
                 href="#projects"
                 className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-mono-code text-xs font-bold tracking-wider shadow-xl shadow-blue-600/25 border border-blue-400/40 transition-all hover:scale-105 active:scale-95"
               >
-                <span>EXPLORE PROJECTS</span>
+                <span>VIEW PROJECTS</span>
                 <ArrowRight className="w-4 h-4" />
+              </a>
+
+              <a
+                href={RESUME_DATA.personal.socialLinks.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2.5 rounded-xl border border-slate-700 bg-slate-900 px-6 py-3 font-mono-code text-xs font-bold tracking-wider text-slate-200 transition-all hover:scale-105 hover:border-blue-400/50 hover:bg-slate-800 active:scale-95"
+              >
+                <ExternalLink className="h-4 w-4" />
+                <span>GITHUB</span>
               </a>
 
               <button

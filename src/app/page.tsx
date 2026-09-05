@@ -5,6 +5,8 @@ import CustomCursor from '@/components/CustomCursor';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import WhatIBuild from '@/components/WhatIBuild';
+import CurrentlyBuilding from '@/components/CurrentlyBuilding';
 import EngineeringStackMap from '@/components/EngineeringStackMap';
 import Projects from '@/components/Projects';
 import SecurityLab from '@/components/SecurityLab';
@@ -30,12 +32,14 @@ export default function Home() {
 
       {/* About Section */}
       <About />
+      <WhatIBuild />
 
       {/* Engineering Stack & Tool Map */}
       <EngineeringStackMap />
 
       {/* Projects Intelligence Archive */}
       <Projects />
+      <CurrentlyBuilding />
 
       {/* Security Lab (Signature Feature) */}
       <SecurityLab />
