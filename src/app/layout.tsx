@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Kavitha Sree | Cybersecurity & Software Engineering',
+  metadataBase: new URL('https://kavithasreejayavaram.github.io/Portfolio/'),
+  title: 'Kavitha Sree | Cybersecurity × AI × Software Engineering',
   description:
-    'Portfolio of Kavitha Sree, a Computer Science and Engineering student specializing in Cyber Security, software development, Python, Linux, machine learning and secure systems.',
+    'Cybersecurity and software engineering portfolio focused on secure systems, AI-powered threat detection, Linux, networking, backend development and practical security engineering.',
+  alternates: { canonical: '/' },
   keywords: [
     'Kavitha Sree',
     'Cybersecurity',
@@ -18,10 +20,16 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'JAYAVARAM LAKSHMI RANGA KAVITHA SREE' }],
   openGraph: {
-    title: 'Kavitha Sree | Cybersecurity & Software Engineering',
+    title: 'Kavitha Sree | Cybersecurity × AI × Software Engineering',
     description:
-      'Personal Operations Interface showcasing secure systems, threat analysis, Linux, Python, and full-stack software development.',
+    'Cybersecurity, AI, and software engineering work by Kavitha Sree.',
     type: 'website',
+    url: 'https://kavithasreejayavaram.github.io/Portfolio/',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Kavitha Sree | Cybersecurity × AI × Software Engineering',
+    description: 'Security-focused software systems, AI/ML, Linux, networking, and backend engineering.',
   },
 };
 

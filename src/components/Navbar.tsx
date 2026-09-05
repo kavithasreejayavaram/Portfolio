@@ -9,6 +9,8 @@ interface NavbarProps {
   onOpenResume: () => void;
 }
 
+type NavItem = { label: string; href?: string; action?: () => void };
+
 export default function Navbar({ onOpenResume }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,14 +23,14 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { label: 'HOME', href: '#home' },
-    { label: 'ABOUT', href: '#about' },
-    { label: 'STACK', href: '#stack' },
-    { label: 'PROJECTS', href: '#projects' },
+    { label: 'WORK', href: '#projects' },
+    { label: 'SKILLS', href: '#stack' },
     { label: 'SECURITY LAB', href: '#security-lab' },
-    { label: 'CERTIFICATIONS', href: '#certifications' },
+    { label: 'ABOUT', href: '#about' },
     { label: 'CONTACT', href: '#contact' },
+    { label: 'RESUME', action: onOpenResume },
   ];
 
   return (
@@ -61,12 +63,13 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-6 text-xs font-mono-code tracking-wider text-slate-300">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="hover:text-blue-400 transition-colors py-1 relative group"
-              >
+            {navItems.map((item) => item.action ? (
+              <button key={item.label} type="button" onClick={item.action} className="hover:text-blue-400 transition-colors py-1 relative group">
+                {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-200 group-hover:w-full" />
+              </button>
+            ) : (
+              <a key={item.label} href={item.href} className="hover:text-blue-400 transition-colors py-1 relative group">
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-200 group-hover:w-full" />
               </a>
@@ -111,13 +114,12 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
             <SystemStatusBadge status="OPERATIONAL" />
           </div>
           <div className="grid grid-cols-1 gap-3">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-blue-400 transition-colors"
-              >
+            {navItems.map((item) => item.action ? (
+              <button key={item.label} type="button" onClick={() => { item.action?.(); setMobileMenuOpen(false); }} className="w-full px-3 py-2 text-left rounded-lg text-slate-300 hover:bg-slate-800 hover:text-blue-400 transition-colors">
+                {item.label}
+              </button>
+            ) : (
+              <a key={item.label} href={item.href} onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-blue-400 transition-colors">
                 {item.label}
               </a>
             ))}

@@ -33,7 +33,7 @@ export default function SecurityLab() {
         <div className="space-y-2 mb-12">
           <div className="flex items-center gap-2 text-xs font-mono-code text-cyan-400 tracking-widest uppercase">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-            <span>// 04. SIGNATURE FEATURE // SECURITY LAB</span>
+            <span>// 04. SECURITY LAB</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             SECURITY DOMAIN & LAB OPERATIONS INTERFACE
@@ -53,7 +53,16 @@ export default function SecurityLab() {
               return (
                 <div
                   key={module.id}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={isSelected}
                   onClick={() => setActiveModuleId(module.id)}
+                  onKeyDown={(event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault();
+                      setActiveModuleId(module.id);
+                    }
+                  }}
                   className={`p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${
                     isSelected
                       ? 'bg-slate-900/90 border-cyan-500/60 shadow-[0_0_20px_rgba(6,182,212,0.15)] ring-1 ring-cyan-400/40'
@@ -112,7 +121,7 @@ export default function SecurityLab() {
                   </div>
                   <div>
                     <span className="text-xs font-mono-code text-cyan-400 font-bold block uppercase">
-                      ACTIVE LAB MODULE
+                      SELECTED MODULE
                     </span>
                     <h3 className="text-lg font-extrabold text-white">
                       {activeModule.title}
@@ -121,7 +130,7 @@ export default function SecurityLab() {
                 </div>
 
                 <span className="px-2.5 py-1 rounded bg-cyan-950/70 border border-cyan-800/60 text-[11px] font-mono-code text-cyan-300">
-                  PIPELINE VERIFIED
+                  PROJECT-GROUNDED FLOW
                 </span>
               </div>
 

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Shield, ArrowRight, ExternalLink, Cpu, Layers, Calendar, Sparkles } from 'lucide-react';
+import { ArrowRight, Calendar } from 'lucide-react';
 import { RESUME_DATA, Project } from '@/data/resumeData';
 import ProjectModal from './ProjectModal';
 import ArchitectureDiagram from './ArchitectureDiagram';
@@ -28,7 +28,7 @@ export default function Projects() {
         <div className="space-y-2 mb-12">
           <div className="flex items-center gap-2 text-xs font-mono-code text-blue-400 tracking-widest uppercase">
             <span className="w-2 h-2 rounded-full bg-blue-500" />
-            <span>// 03. PROJECT INTELLIGENCE ARCHIVE</span>
+            <span>// 03. SELECTED WORK</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             FEATURED ENGINEERING & SECURITY PROJECTS
@@ -53,7 +53,7 @@ export default function Projects() {
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div className="flex items-center gap-3">
               <span className="px-3 py-1 rounded-lg bg-blue-600 text-white font-mono-code text-xs font-bold tracking-wider">
-                FLAGSHIP PROJECT // {featuredProject.number}
+              FEATURED PROJECT // {featuredProject.number}
               </span>
               <span className="text-xs font-mono-code text-blue-400 font-semibold">
                 {featuredProject.domain}
@@ -96,7 +96,7 @@ export default function Projects() {
                   onClick={() => setSelectedProject(featuredProject)}
                   className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-mono-code text-xs font-bold tracking-wider shadow-lg shadow-blue-600/25 transition-all hover:scale-105"
                 >
-                  <span>EXPLORE CASE STUDY & ARCHITECTURE</span>
+                  <span>VIEW CASE STUDY & ARCHITECTURE</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -128,7 +128,7 @@ export default function Projects() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between border-b border-slate-800 pb-2">
                   <span className="text-xs font-mono-code font-bold text-blue-400">
-                    PROJECT {project.number}
+                  {project.status?.toUpperCase()} // {project.number}
                   </span>
                   <span className="text-[11px] font-mono-code text-slate-500">
                     {project.timeline}

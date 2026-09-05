@@ -15,6 +15,7 @@ export interface Project {
     connections: { from: string; to: string }[];
   };
   githubUrl: string;
+  status?: 'Featured' | 'Supporting';
   featured?: boolean;
 }
 
@@ -50,11 +51,10 @@ export const RESUME_DATA = {
   personal: {
     fullName: "JAYAVARAM LAKSHMI RANGA KAVITHA SREE",
     shortName: "KAVITHA SREE",
-    headline: "CYBERSECURITY × SOFTWARE ENGINEERING",
-    tagline: "I build secure, intelligent and reliable software systems.",
+    headline: "CYBERSECURITY × AI × SOFTWARE ENGINEERING",
+    tagline: "I build security-focused software systems across threat detection, intelligent automation, and backend engineering.",
     tags: ["Python", "Cybersecurity", "Linux", "Machine Learning", "Full-Stack Development"],
     email: "lj6237@srmist.edu.in",
-    phone: "8247051243",
     statusProfile: {
       role: "Cybersecurity / Software Engineering",
       focus: "Secure Systems • Threat Detection • Software Development",
@@ -62,16 +62,16 @@ export const RESUME_DATA = {
       currentStatus: "Building → Learning → Engineering"
     },
     socialLinks: {
-      linkedin: "REPLACE_WITH_LINKEDIN_URL",
-      github: "REPLACE_WITH_GITHUB_URL",
-      leetcode: "REPLACE_WITH_LEETCODE_URL",
-      codechef: "REPLACE_WITH_CODECHEF_URL",
-      hackerrank: "REPLACE_WITH_HACKERRANK_URL"
+      linkedin: "",
+      github: "https://github.com/kavithasreejayavaram",
+      leetcode: "",
+      codechef: "",
+      hackerrank: ""
     }
   },
   
   about: {
-    story: "Aspiring Cybersecurity professional with a foundation in system security, networking, secure application development, Python, Linux, threat analysis, vulnerability assessment, and cyber forensics. Dedicated to engineering robust, secure, and intelligent software systems that protect data and deliver high reliability.",
+    story: "I am a Computer Science and Engineering student specializing in Cyber Security, building practical software at the intersection of security engineering, AI/ML, and backend development. My work spans Linux, networking, packet analysis, secure APIs, and data-driven threat detection.",
     currentDegree: "B.Tech in Computer Science and Engineering — Cyber Security",
     institution: "SRM Institute of Science and Technology",
     gradYear: "2027",
@@ -110,11 +110,8 @@ export const RESUME_DATA = {
     systemsAndTools: [
       "Linux",
       "GitHub",
-      "VS Code",
       "Firebase",
-      "Excel",
-      "PowerPoint",
-      "MS Word"
+      "Git"
     ],
     relationshipMap: [
       {
@@ -173,7 +170,8 @@ export const RESUME_DATA = {
           { from: "analysis", to: "dash" }
         ]
       },
-      githubUrl: "REPLACE_WITH_GITHUB_URL",
+      githubUrl: "",
+      status: "Featured",
       featured: true
     },
     {
@@ -207,7 +205,8 @@ export const RESUME_DATA = {
           { from: "logic", to: "mysql" }
         ]
       },
-      githubUrl: "REPLACE_WITH_GITHUB_URL"
+      githubUrl: "",
+      status: "Supporting"
     },
     {
       id: "garage-guru",
@@ -238,7 +237,8 @@ export const RESUME_DATA = {
           { from: "modules", to: "firebase" }
         ]
       },
-      githubUrl: "REPLACE_WITH_GITHUB_URL"
+      githubUrl: "",
+      status: "Supporting"
     },
     {
       id: "routemate",
@@ -271,7 +271,8 @@ export const RESUME_DATA = {
           { from: "mysql", to: "ops" }
         ]
       },
-      githubUrl: "REPLACE_WITH_GITHUB_URL"
+      githubUrl: "",
+      status: "Supporting"
     }
   ] as Project[],
 
