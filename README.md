@@ -104,7 +104,6 @@ npm run build
 ## 📬 Contact & Channels
 
 - **Email**: [lj6237@srmist.edu.in](mailto:lj6237@srmist.edu.in)
-- **Phone**: 8247051243
 - **Profiles**:
   - GitHub: [kavithasreejayavaram](https://github.com/kavithasreejayavaram)
   - LinkedIn, LeetCode, CodeChef and HackerRank: not published in the current portfolio data

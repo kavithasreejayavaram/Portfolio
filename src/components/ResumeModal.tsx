@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Shield, FileText, CheckCircle2, Mail, MapPin } from 'lucide-react';
 import { RESUME_DATA } from '@/data/resumeData';
@@ -184,14 +185,13 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               >
                 CLOSE
               </button>
-              <a
+              <Link
                 href="/resume"
                 target="_blank"
-                rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-xs font-semibold font-mono-code text-white transition-colors hover:bg-blue-500"
               >
                 OPEN PRINTABLE RESUME
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>

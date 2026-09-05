@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ExternalLink, CheckCircle2, Shield, Calendar, Layers, AlertTriangle } from 'lucide-react';
 import { Project } from '@/data/resumeData';
@@ -142,9 +143,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             {/* Footer Action Buttons */}
             <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-800 font-mono-code text-xs">
-              <a href={`/projects/${project.id}`} className="inline-flex items-center gap-2 rounded-xl border border-blue-500/40 px-5 py-2.5 font-bold text-blue-300 transition-colors hover:border-blue-400 hover:text-white">
+              <Link href={`/projects/${project.id}`} className="inline-flex items-center gap-2 rounded-xl border border-blue-500/40 px-5 py-2.5 font-bold text-blue-300 transition-colors hover:border-blue-400 hover:text-white">
                 FULL CASE STUDY
-              </a>
+              </Link>
               {project.githubUrl ? (
                 <a href={project.githubUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold transition-all shadow-lg shadow-blue-600/20">
                   <GithubIcon className="w-4 h-4" />
